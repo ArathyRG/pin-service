@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "ef3aeffc-3b9b-4983-87a1-8239b9f9fcea",
+		"name": "PinActivation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28558794"
+	},
+	"item": [
+		{
+			"name": "success-activation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"customerId\": \"12345\", \"macAddress\": \"AA:BB:CC:DD:EE:FF\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pin-not-registered",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"customerId\": \"12345\", \"macAddress\": \"AA:BB:CC:DD:EE:AA\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pin-already-attached",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"customerId\": \"11111\", \"macAddress\": \"AA:BB:CC:DD:EE:FF\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"activate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

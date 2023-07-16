@@ -1,0 +1,15 @@
+{
+	"request": {
+        "urlPath": "/activate",
+        "method": "POST",
+        "bodyPatterns" : [ 
+        	{
+      			"equalToJson" : {"customerId": "11111", "macAddress": "AA:BB:CC:DD:EE:FF"}
+    		} 
+    	]
+    },
+    "response": {
+        "status": 409,
+        "bodyFileName": "409Conflict.txt"
+    }
+}

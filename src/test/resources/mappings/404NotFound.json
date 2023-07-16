@@ -1,0 +1,15 @@
+{
+	"request": {
+        "urlPath": "/activate",
+        "method": "POST",
+        "bodyPatterns" : [ 
+        	{
+      			"equalToJson" : {"customerId": "12345", "macAddress": "AA:BB:CC:DD:EE:AA"}
+    		} 
+    	]
+    },
+    "response": {
+        "status": 404,
+        "bodyFileName": "404NotFound.txt"
+    }
+}
