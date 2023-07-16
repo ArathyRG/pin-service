@@ -89,6 +89,62 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "unknown error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"customerId\": \"12345\", \"macAddress\": \"AA:BB:CC:DD:EE:DD\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generic error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"customerId\": \"11111\", \"macAddress\": \"AA:BB:CC:DD:EE:DD\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/activate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"activate"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

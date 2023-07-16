@@ -1,0 +1,15 @@
+{
+	"request": {
+        "urlPath": "/activate",
+        "method": "POST",
+        "bodyPatterns" : [ 
+        	{
+      			"equalToJson" : {"customerId": "12345", "macAddress": "AA:BB:CC:DD:EE:DD"}
+    		} 
+    	]
+    },
+    "response": {
+        "status": 403,
+        "bodyFileName": "403Forbidden.txt"
+    }
+}
